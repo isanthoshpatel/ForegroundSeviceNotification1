@@ -27,8 +27,8 @@ class MainActivity : AppCompatActivity() {
     fun startNService() {
         var i = Intent(this, NotificationService::class.java)
         i.putExtra("text", et_text.text.toString())
-        //startService(i)
-        ContextCompat.startForegroundService(this, i)
+        startService(i)
+       // ContextCompat.startForegroundService(this, i)
     }
 
     fun stopNService(){
